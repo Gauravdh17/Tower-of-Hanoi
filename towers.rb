@@ -1,6 +1,8 @@
 
 def printMove(fr, to)
-  puts "move disk at peg #{fr} to peg #{to}."
+  $num_calls
+  $num_calls += 1
+  #~ puts "move disk at peg #{fr} to peg #{to}."
 end
 
 def towers(n, fr, to, spare)  
@@ -13,4 +15,16 @@ def towers(n, fr, to, spare)
   end
 end
 
-towers(2, "A", "B", "C")
+$num_calls = 0
+for d in 1..18
+  towers(d, 'A', 'B', 'C')
+  puts $num_calls
+end
+#~ puts
+#~ towers(2, 'A', 'B', 'C')
+#~ puts $num_calls
+#~ puts
+#~ towers(3, 'A', 'B', 'C')
+#~ puts $num_calls
+#~ towers(29, 'A', 'B', 'C')
+#~ puts $num_calls
