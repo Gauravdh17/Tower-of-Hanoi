@@ -1,4 +1,4 @@
-require "Stack.rb"
+require_relative 'Stack'
 
 def tower( n, frompeg, topeg, auxpeg )
   if n == 1
